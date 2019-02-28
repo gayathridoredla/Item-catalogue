@@ -1,5 +1,5 @@
 # Item Catalog Web-App
-By Doredla Gayathri
+By Doredla.Gayathri
 This web app is a project for the Udacity [FSND Course](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004).
 
 ## About
