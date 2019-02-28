@@ -83,4 +83,4 @@ watch Category Edition JSON: `/watchStore/<path:watch_name>/<path:edition_name>/
 
 ## Miscellaneous
 
-This project is inspiration from [gmawii](https://github.com/gmawii/item-catalog).
+This project is inspiration from [gmaii](https://github.com/gmaii/item-catalog).
