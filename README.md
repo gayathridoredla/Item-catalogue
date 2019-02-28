@@ -62,25 +62,25 @@ To get the Google login working there are a few additional steps:
 11. On the Dev Console Select Download JSON
 12. Rename JSON file to client_secrets.json
 13. Place JSON file in book-store directory that you cloned from here
-14. Run application using `python /byke_store/main.py`
+14. Run application using `python /watch_store/main.py`
 
 ## JSON Endpoints
 The following are open to the public:
 
-Bykes Catalog JSON: `/BykeStore/JSON`
-    - Displays the whole bykes models catalog. Byke Categories and all models.
+Watch Catalog JSON: `/watchStore/JSON`
+    - Displays the whole watches models catalog. watch Categories and all models.
 
-Byke Categories JSON: `/bykekStore/bykeCategories/JSON`
-    - Displays all Byke categories
-All Byke Editions: `/bykeStore/editions/JSON`
-	- Displays all Byke Models
+Watch Categories JSON: `/watchkStore/watchCategories/JSON`
+    - Displays all watch categories
+All watch Editions: `/watchStore/editions/JSON`
+	- Displays all watch Models
 
-Byke Edition JSON: `/bykekStore/<path:byke_name>/editions/JSON`
-    - Displays Byke models for a specific Byke category
+watch Edition JSON: `/watchkStore/<path:watch_name>/editions/JSON`
+    - Displays watch models for a specific watch category
 
-Byke Category Edition JSON: `/bykeStore/<path:bykek_name>/<path:edition_name>/JSON`
-    - Displays a specific Byke category Model.
+watch Category Edition JSON: `/watchStore/<path:watch_name>/<path:edition_name>/JSON`
+    - Displays a specific watch category Model.
 
 ## Miscellaneous
 
-This project is inspiration from [gmawji](https://github.com/gmawji/item-catalog).
+This project is inspiration from [gmawii](https://github.com/gmawii/item-catalog).
