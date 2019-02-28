@@ -1,0 +1,15 @@
+{% include 'nav.html' %}
+<div class="main">
+{% block content %}
+    
+<div class="">
+  <h2>Edit Watch Category</h2>
+  <form class="form-inline" action="{{ url_for('editWatchCategory',w1xid=w1x.id)}}" method="post">
+    <div class="form-group">
+      <label for="name">Watch Name:</label>
+      <input type="text" class="form-control" id="name" value="{{w1x.name}}" name="name">
+    </div>
+    <button type="submit" class="btn btn-primary" style="background-color: #3399ff;">SUBMIT</button>
+  </form>
+</div>
+{% endblock content %}

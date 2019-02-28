@@ -1,0 +1,57 @@
+
+
+{% include 'nav.html' %}
+<div class="main">
+{% block content %}
+
+<div class="">
+		<div class="mr-sm-2 mb-2 col-sm-8" style="margin: 10px;">
+			<form action="{{ url_for('addWatchDetails',w1xname=w1xname)}}" method="POST">
+				<div class="panel panel-danger">
+				  <div class="panel-heading bg-success">Add Watch Details</div>
+				  <div class="panel-body">
+				  	
+					  <div class="form-group">
+					  	<label class="text-primary" for="modelname" style="color: #e63900;">Enter modelname:</label>
+					    <input type="name" class="form-control" name="modelname" placeholder="Enter name:" title="Allow Characters Only" required>
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" for="description" style="color: #e63900;">Enter description:</label>
+					    <input type="text" class="form-control" name="description" placeholder="Enter des:" title="Allow Characters Only" required>
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" for="price" style="color: #e63900;">Enter price:</label>
+					    <input type="text" class="form-control" name="price" placeholder="Enter pr:" pattern="[A-Za-z0-9 ]{1,}" title="Allow both characters and numbers only " required>
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" for="rating" style="color: #e63900;">Enter rating:</label>
+					    <input type="text" class="form-control" name="rating" placeholder="Enter rate:" pattern="[A-Za-z0-9 ]{1,}" title="Allow Characters Only" required>
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" for="color" style="color: #e63900;">Enter color:</label>
+					    <input type="text" class="form-control" name="color" placeholder="Enter color:" title="Allow both characters and numbers only " required>
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" for="modelweight" style="color: #e63900;">Enter modelweight:</label>
+					    <input type="text" class="form-control" name="modelweight" placeholder="Enter mwgt:" pattern="[A-Za-z0-9 ]{1,}" title="Allow both characters and numbers only " required>
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" for="modellength" style="color: #e63900;">Enter modellength:</label>
+					    <input type="text" class="form-control" name="modellength" placeholder="Enter mlen:" pattern="[A-Za-z0-9 ]{1,}" title="Allow both characters and numbers only " required>
+					  </div>
+					  <div class="form-group">
+					  	<label class="text-primary" for="modelwidth" style="color: #e63900;">Enter modelwidth:</label>
+					    <input type="text" class="form-control" name="modelwidth" placeholder="Enter mwid:" pattern="[A-Za-z0-9 ]{1,}" title="Allow both characters and numbers only " required>
+					  </div>
+					   <div class="form-group">
+					    <input type="text" class="form-control" style="color: #e63900;"name="watchnameid" value="{{ w1xname }}" readonly >
+					  </div>
+				  </div> 
+				  <div class="panel-footer text-center"><input type="submit" style="background-color: #3399ff;class="btn btn-info" value="Submit"></div>
+				</div>
+				
+				</form>
+				</div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,48 @@
+
+{% include 'nav.html' %}
+<div class="main">
+{% block content %}
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	        <div class="alert alert-success alert-dismissable animated fadeIn">
+	            {% for message in messages %}
+	            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+	            <p class="h4"><strong>{{ message }}</strong></p>
+	            {% endfor %}
+	        </div>
+	{% endif %}	    
+{% endwith %}
+{% if 'username' in session %}
+<button type="button" class="btn btn-success" style="margin: 5px 0px 5px 25px; background-color: #ff8c1a;border-radius:12%;"><a href="{{url_for('addWatchDetails',w1xname=w1xs.name)}}" style="text-decoration: none;"><italic>Add New Watch</italic></a></button>
+
+{% endif %}
+<div class="row" style="margin: 10px;">
+{% for w1xe in w1xes %}
+
+	<div class="col-sm-4 text-center">
+		<div class="panel panel-primary" style="font-family:Bradely Hand Itc; width:280px;">
+			<div class="panel-heading" style="font-family:Bradely Hand Itc;background-color: #ff8080;">
+				<h4>{{ w1xe.modelname }}</h4>
+			</div>
+			<div class="panel-body text-center">
+			<table style="background-color: #b3ffb3; border-radius:10%;width:250px;" >
+					<tr><th>ModelName</th><td>:</td><td><h4>{{ w1xe.modelname }}</h4></td></tr>
+					<tr><th>Price</th><td>:</td><td><h4>{{ w1xe.price}}</h4></td></tr>
+					<tr><th>Color</th><td>:</td><td><h4>{{ w1xe.color }}</h4></td></tr>
+					
+				</table>
+			</div>
+			{% if 'username' in session %}
+			<div class="panel-footer">
+					<button type="button" class="btn btn-info" style="background-color: #3399ff;border-radius:20%;width:70px;"><a href="{{ url_for('editWatch',w1xid=w1xs.id,w1xename=w1xe.modelname) }}" style="text-decoration: none;color:white;"><italic>EDIT</italic></a></button>
+					<button type="button" class="btn btn-danger" style="background-color:#ff0000;
+					border-radius:20%;width:70px;"><a href="{{ url_for('deleteWatch',w1xid=w1xs.id,w1xename=w1xe.modelname)}}"style="text-decoration: none;color:white;"><italic>DELETE</italic></a></button>
+			</div>
+			{% endif %}	
+			
+		</div>
+	</div>
+{% endfor %}
+</div>
+{% endblock content %}
+</div>
